@@ -235,10 +235,11 @@ if (contactForm) {
       if (res.ok) {
         if (formSuccess) {
           formSuccess.hidden = false;
-          formSuccess.innerHTML = '<span>✓</span><span>Message delivered directly to ankitpathak.1119@gmail.com!</span>';
+          formSuccess.innerHTML = '<span>✓</span><span>Thank you! Your message has been sent successfully.</span>';
+          setTimeout(() => { formSuccess.hidden = true; }, 5000);
         }
         contactForm.reset();
-        showToast('✓ Message sent successfully to Ankit!');
+        showToast('✓ Message sent successfully');
       } else {
         throw new Error('API submission failed');
       }
