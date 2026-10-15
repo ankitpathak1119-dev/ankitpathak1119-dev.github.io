@@ -1,0 +1,11 @@
+# Local workspace metadata & IDE agents
+.agents/
+.claude/
+skills-lock.json
+
+# Local scripts
+start-portfolio.bat
+
+# OS files
+Thumbs.db
+.DS_Store
