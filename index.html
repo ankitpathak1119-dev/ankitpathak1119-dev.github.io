@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
     
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <!-- Subtle Background Texture -->
@@ -535,10 +535,7 @@
                   <textarea id="form-message" name="message" rows="4" placeholder="Brief details about your role or project..." required></textarea>
                 </div>
                 
-                <div class="form-success-banner" id="form-success" hidden>
-                  <span>✓</span>
-                  <span>Thank you! Your message has been sent successfully.</span>
-                </div>
+                <div class="form-success-banner" id="form-success" role="status" aria-live="polite"></div>
 
                 <button class="btn btn-primary" type="submit">
                   <span>Send Message</span>
@@ -566,6 +563,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>

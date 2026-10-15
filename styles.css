@@ -1176,15 +1176,19 @@ p {
 }
 
 .form-success-banner {
+  display: none !important;
   padding: 10px 14px;
   background: var(--accent-muted);
   border: 1px solid var(--accent-border);
   border-radius: var(--radius-sm);
   color: var(--accent);
   font-size: 13px;
-  display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.form-success-banner.show {
+  display: flex !important;
 }
 
 /* Minimal Toast Alert */

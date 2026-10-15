@@ -227,16 +227,16 @@ if (contactForm) {
         body: JSON.stringify({
           name: senderName,
           email: senderEmail,
-          _subject: `[Portfolio] ${subject}`,
+          _subject: subject,
           message: message
         })
       });
 
       if (res.ok) {
         if (formSuccess) {
-          formSuccess.hidden = false;
+          formSuccess.classList.add('show');
           formSuccess.innerHTML = '<span>✓</span><span>Thank you! Your message has been sent successfully.</span>';
-          setTimeout(() => { formSuccess.hidden = true; }, 5000);
+          setTimeout(() => { formSuccess.classList.remove('show'); }, 5000);
         }
         contactForm.reset();
         showToast('✓ Message sent successfully');
@@ -245,12 +245,13 @@ if (contactForm) {
       }
     } catch (_) {
       // Graceful fallback to mail client
-      const encSub = encodeURIComponent(`[Portfolio] ${subject}`);
+      const encSub = encodeURIComponent(subject);
       const encBody = encodeURIComponent(`Hi Ankit,\n\nName: ${senderName}\nEmail: ${senderEmail}\n\nMessage:\n${message}`);
       window.location.href = `mailto:ankitpathak.1119@gmail.com?subject=${encSub}&body=${encBody}`;
       if (formSuccess) {
-        formSuccess.hidden = false;
+        formSuccess.classList.add('show');
         formSuccess.innerHTML = '<span>✓</span><span>Opening your email client...</span>';
+        setTimeout(() => { formSuccess.classList.remove('show'); }, 5000);
       }
       showToast('Opening default mail client...');
     } finally {
