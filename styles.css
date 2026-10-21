@@ -595,6 +595,83 @@ p {
   line-height: 1.6;
 }
 
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-photo-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.about-photo-card:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2312 / 2590;
+  overflow: hidden;
+  background: var(--bg-subtle);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-photo-card:hover .about-photo {
+  transform: scale(1.025);
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  pointer-events: none;
+}
+
+.photo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.photo-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
 .fact-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1308,6 +1385,11 @@ p {
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  .about-sidebar {
+    max-width: 420px;
+    width: 100%;
   }
   
   .credentials-grid {
