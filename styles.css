@@ -1402,6 +1402,23 @@ p {
   color: var(--text-subtle);
 }
 
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
 .footer-copy {
   font-family: var(--font-mono);
   font-size: 12px;
