@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
     
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
     <!-- Subtle Background Texture -->
@@ -139,7 +139,7 @@
                 My interests span <strong>Vulnerability Assessment and Penetration Testing (VAPT), Web Application Security, Network Security, Digital Forensics, and Security Operations</strong>. I have practical exposure to tools such as Burp Suite, OWASP ZAP, Nmap, Wireshark, FTK, Autopsy, and Belkasoft.
               </p>
               <p>
-                My project experience includes analyzing session and cookie-related vulnerabilities in forensic software, investigating network traffic, and developing a <strong>Hybrid Machine Learning-Based Intrusion Detection System</strong> using Random Forest, DBSCAN, and Autoencoder models.
+                My project experience includes developing a <strong>Hybrid Machine Learning-Based Insider Threat Detection &amp; Active Defense System</strong>, architecting a <strong>Network Intrusion Detection System (IDS)</strong> with Random Forest and Autoencoder models, and analyzing session and cookie-based vulnerabilities in forensic software.
               </p>
               <p>
                 I enjoy investigating security weaknesses, analyzing technical evidence, and translating findings into clear, actionable reports. With a strong foundation in both forensic science and cybersecurity, I aim to contribute to identifying vulnerabilities, strengthening security defenses, and supporting digital investigations.
@@ -328,47 +328,85 @@
           </div>
 
           <div class="project-grid" id="resume-projects">
-            <!-- Project 1 -->
-            <article class="project-card reveal">
+            <!-- Project 1: Flagship Insider Threat & Active Defense -->
+            <article class="project-card project-card-featured reveal">
               <div>
                 <div class="project-tag-strip">
-                  <span class="project-category">Forensics &amp; VAPT</span>
-                  <span class="mono-label">RESEARCH-01</span>
+                  <span class="project-category featured">AI/ML &amp; Endpoint Active Defense</span>
+                  <span class="mono-label">RESEARCH-01 · FLAGSHIP</span>
                 </div>
-                <h3>Penetration Testing &amp; Vulnerability Analysis</h3>
-                <p class="project-context">Belkasoft Forensic Software · Medicaps University</p>
-                <p class="project-desc">
-                  Identified session-management vulnerabilities, including flaws in session handling. Analyzed cookie-based vulnerabilities and traced unauthorized access via session IDs and tokens. Conducted a full vulnerability assessment and documented findings in a technical report.
-                </p>
+                <h3>Hybrid ML-Based Insider Threat Detection &amp; Active Defense System</h3>
+                <p class="project-context">Amity University Rajasthan · M.Sc. Minor Project (Nov 2026)</p>
+                <div class="project-metrics-strip">
+                  <span class="metric-pill">98.42% Ensemble Accuracy</span>
+                  <span class="metric-pill">CMU CERT v4.2 Benchmark</span>
+                  <span class="metric-pill">Active Defense Workstation Lockout</span>
+                </div>
+                <ul class="project-bullets">
+                  <li><strong>Endpoint Telemetry Agent:</strong> Multi-threaded Python daemon collecting Windows Security Event Logs (IDs 4624, 4634, 4656, 4663, 4660, 4688), SACL protected file operations, USB connections, and large-scale clipboard data staging (607MB+).</li>
+                  <li><strong>Hybrid Ensemble Engine:</strong> Combines Isolation Forest (unsupervised anomaly detection) and PyTorch LSTM (sequential logon patterns) with statistical baselines, evaluated on CMU CERT v4.2 dataset with SHAP-style explainable reasoning for SOC analysts.</li>
+                  <li><strong>Active Defense &amp; Offline Resilience:</strong> In Armed Mode, triggers automated desktop forensic screenshot capture and immediate Windows workstation lockout (via <code>user32.LockWorkStation</code>) at Risk ≥ 0.90; features a Streamlit live SOC dashboard and fault-tolerant local SQLite buffering.</li>
+                </ul>
               </div>
               <div class="project-tags">
-                <span>Session Security</span>
-                <span>Cookie Analysis</span>
-                <span>VAPT</span>
-                <span>Forensics</span>
-                <span>Belkasoft</span>
+                <span>PyTorch LSTM</span>
+                <span>Isolation Forest</span>
+                <span>Windows API (user32)</span>
+                <span>Streamlit SOC</span>
+                <span>SHAP XAI</span>
+                <span>CMU CERT v4.2</span>
+                <span>Active Defense</span>
+                <span>SQLite</span>
               </div>
             </article>
 
-            <!-- Project 2 -->
+            <!-- Project 2: Network ML IDS -->
             <article class="project-card reveal delay-1">
               <div>
                 <div class="project-tag-strip">
                   <span class="project-category">Machine Learning &amp; SOC</span>
                   <span class="mono-label">RESEARCH-02</span>
                 </div>
-                <h3>Hybrid ML-Based Intrusion Detection System (IDS)</h3>
+                <h3>Hybrid Machine Learning-Based Intrusion Detection System (IDS)</h3>
                 <p class="project-context">Amity University Rajasthan</p>
-                <p class="project-desc">
-                  Designed and built a real-time IDS combining Random Forest, DBSCAN, and Autoencoder models. Implemented live packet analysis and anomaly detection in a SOC-style monitoring setup. Trained the model on the CICIDS2017 dataset and validated detection of live port-scan attacks using Kali Linux.
-                </p>
+                <ul class="project-bullets">
+                  <li>Designed and built a real-time network IDS combining Random Forest, DBSCAN clustering, and Autoencoder models.</li>
+                  <li>Implemented live packet sniffing and anomaly detection within a SOC-style monitoring pipeline.</li>
+                  <li>Trained on the CICIDS2017 dataset and validated detection of live port-scan attacks using Kali Linux.</li>
+                </ul>
               </div>
               <div class="project-tags">
                 <span>Python</span>
                 <span>Random Forest</span>
                 <span>Autoencoder</span>
+                <span>DBSCAN</span>
                 <span>CICIDS2017</span>
                 <span>SOC Anomaly Detection</span>
+                <span>Kali Linux</span>
+              </div>
+            </article>
+
+            <!-- Project 3: Medicaps Belkasoft VAPT -->
+            <article class="project-card reveal delay-2">
+              <div>
+                <div class="project-tag-strip">
+                  <span class="project-category">Forensics &amp; VAPT</span>
+                  <span class="mono-label">RESEARCH-03</span>
+                </div>
+                <h3>Penetration Testing &amp; Vulnerability Analysis</h3>
+                <p class="project-context">Belkasoft Forensic Software · Medicaps University, Indore</p>
+                <ul class="project-bullets">
+                  <li>Identified session-management vulnerabilities and analyzed cookie-based flaws, tracing unauthorized access via session IDs and tokens.</li>
+                  <li>Conducted a full vulnerability assessment on digital forensic application software and documented findings in an actionable technical remediation report.</li>
+                </ul>
+              </div>
+              <div class="project-tags">
+                <span>Session Security</span>
+                <span>Cookie Analysis</span>
+                <span>VAPT</span>
+                <span>Digital Forensics</span>
+                <span>Belkasoft</span>
+                <span>Security Assessment</span>
               </div>
             </article>
           </div>
