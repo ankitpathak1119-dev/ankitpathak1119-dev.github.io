@@ -163,9 +163,9 @@ if (copyPhoneBtn) {
 // Dynamic Role Typewriter Loop in Hero
 const roles = [
   "Cyber Security Analyst",
-  "VAPT Specialist",
-  "SOC Operations & Threat Intel",
-  "Digital Forensics Investigator"
+  "VAPT Analyst",
+  "SOC Analyst",
+  "Digital Forensics Analyst"
 ];
 let roleIdx = 0;
 let charIdx = 0;
