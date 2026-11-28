@@ -673,6 +673,7 @@ p {
 }
 
 .fact-card {
+  margin-top: 28px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -706,7 +707,8 @@ p {
 
 .fact-item dd {
   color: var(--text-main);
-  word-break: break-all;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .fact-item a {
