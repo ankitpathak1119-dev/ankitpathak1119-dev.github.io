@@ -1058,11 +1058,18 @@ p {
   margin-bottom: 24px;
 }
 
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 14px;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: auto;
 }
 
 .project-tags span {
@@ -1072,6 +1079,64 @@ p {
   background: var(--bg-subtle);
   border: 1px solid var(--border);
   border-radius: 4px;
+  color: var(--text-subtle);
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-project-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.btn-project-code:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn-project-code .gh-icon {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.btn-project-code .btn-arrow {
+  color: var(--accent);
+  font-size: 11px;
+  transition: transform var(--transition);
+}
+
+.btn-project-code:hover .btn-arrow {
+  transform: translate(2px, -2px);
+}
+
+.project-confidential-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: color-mix(in srgb, var(--surface) 40%, transparent);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 11px;
   color: var(--text-subtle);
 }
 
